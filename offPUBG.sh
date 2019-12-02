@@ -2,10 +2,10 @@ echo "--yt:pensiunanhacker--"
 sleep 3
 echo " "
 echo " "
-am force-stop com.tencent.ig
+killall -9 com.tencent.ig
 #fix file oobbmod (rename default again)
 #sooooooon
-echo "\e[33mCLEANING LIB MOD..."
+echo "CLEANING LIB MOD..."
 echo "-----------------------------------------------"
 #remove mod2 folder libmod
 rm -rf /data/data/com.tencent.ig/lib/mod2
@@ -70,13 +70,11 @@ echo "DONE ROMOVED FOLDER MOD2"
 echo " "
 echo " "
 echo "-----------------------------------------------"
-echo "\e[32myt:pensiunanhacker [TeaM]"
+echo "yt:pensiunanhacker [TeaM]"
 echo " "
 echo " "
-echo "\e[32mDONE ALL OFF COMPLETED!!!"
+echo "DONE ALL OFF COMPLETED!!!"
 echo "-----------------------------------------------"
-echo "\e[32nPress [(Im) button] then [ENTER] to EXIT"
+echo "Press [(Im) button] then [ENTER] to EXIT"
 echo "-----------------------------------------------"
-
-
 
