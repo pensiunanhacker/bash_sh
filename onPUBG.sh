@@ -1,5 +1,6 @@
+
 echo "-----------------------------------------------"
-echo "\e[32myt:pensiunanhacker [TeaM]"
+echo "yt:pensiunanhacker [TeaM]"
 sleep 3
 mkdir /data/data/com.tencent.ig/lib/mod1
 chmod -R 777 /data/data/com.tencent.ig/lib/mod1
@@ -93,12 +94,15 @@ chmod -R 777 /data/data/com.tencent.ig/lib/mod2/libtersafe.so
 echo "$(tr -cd 'E7E9EAECEDE2E3FAFBFCFDFEE7FAE9FBEAFCECFDSTUVWXYZabcdefghijklmnopqrstuvwxyzBCDEFGHIJKLMNOPQRSTUVWXYZ0123456789()+*,.-/=@!$_?&���/=/-��:;#�%<>|�\�~�.^�' < /dev/urandom | head -c$(shuf -i 400000-1000000 -n 1))" >> /data/data/com.tencent.ig/lib/mod2/libtersafe.so
 echo "-----------------------------------------------"
 echo -e "[IGNORE NOT FOUND!!!]"
+echo -e "[IGNORE broken pipe!!!]"
 echo " "
 echo -e "[IGNORE NOT FOUND!!!]"
+echo -e "[IGNORE broken pipe!!!]"
 echo " "
 echo -e "[IGNORE NOT FOUND!!!]"
+echo -e "[IGNORE broken pipe!!!]"
 echo " "
-echo -e "\e[33mMemory information:"
+echo -e "Memory information:"
 cat /proc/meminfo
 echo -e "Please Wait..."
 echo "-----------------------------------------------"
@@ -194,6 +198,6 @@ echo "-----------------------------------------------"
 echo "please wait... "
 sleep 7
 echo "-----------------------------------------------"
-echo " \e[32myt:pensiunanhacker [TeaM]"
-echo " \e[32nPress [(Im) button] then [ENTER] to EXIT"
+echo " yt:pensiunanhacker [TeaM]"
+echo " Press [(Im) button] then [ENTER] to EXIT"
 echo "-----------------------------------------------"
