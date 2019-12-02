@@ -20,6 +20,14 @@ pkg install nodejs
 npm install -g bash-obfuscate
 
 after finished install pkg...
+
+next step get access root via termux:
+
+apt install tsu
+
+tsu
+
+
 then clone download...
 
 git clone https://github.com/pensiunanhacker/bash_sh
