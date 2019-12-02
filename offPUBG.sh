@@ -2,7 +2,9 @@ echo "--yt:pensiunanhacker--"
 sleep 3
 echo " "
 echo " "
-killall -9 com.tencent.ig
+am stop -n com.tencent.ig/com.epicgames.ue4.SplashActivity
+echo "again stop "
+adb shell am broadcast -a com.epicgames.ue4.SplashActivity.STOP
 #fix file oobbmod (rename default again)
 #sooooooon
 echo "CLEANING LIB MOD..."
@@ -77,4 +79,6 @@ echo "DONE ALL OFF COMPLETED!!!"
 echo "-----------------------------------------------"
 echo "Press [(Im) button] then [ENTER] to EXIT"
 echo "-----------------------------------------------"
+
+
 
