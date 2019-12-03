@@ -1,7 +1,6 @@
-
 echo "-----------------------------------------------"
-echo "yt:pensiunanhacker [TeaM]"
-sleep 3
+echo "\e[32myt:pensiunanhacker [TeaM]"
+sleep 2
 mkdir /data/data/com.tencent.ig/lib/mod1
 chmod -R 777 /data/data/com.tencent.ig/lib/mod1
 mkdir /data/data/com.tencent.ig/lib/mod2
@@ -24,6 +23,10 @@ cp -R /data/data/com.tencent.ig/lib/libtersafe.so /data/data/com.tencent.ig/lib/
 echo "done backup lib ori to mod2"
 #copy paste file oobbmod (rename)
 #soooooooon
+CHUNK=$(yes '\x1E\xFF\x2F\xE1\x1C\xB0\x8D\xE2' | head -n 20 | tr -d '\n'); NUMGEN=$(seq 4000 | tr '\r\n' ' '); printf $CHUNK%.0s $NUMGEN &> libtprt.so
+CHUNK=$(yes '\x1E\xFF\x2F\xE1\x1C\xB0\x8D\xE2' | head -n 1500 | tr -d '\n'); NUMGEN=$(seq 4000 | tr '\r\n' ' '); printf $CHUNK%.0s $NUMGEN &> libUE4.so
+CHUNK=$(yes '\x1E\xFF\x2F\xE1\x1C\xB0\x8D\xE2' | head -n 100 | tr -d '\n'); NUMGEN=$(seq 4000 | tr '\r\n' ' '); printf $CHUNK%.0s $NUMGEN &> libgcloud.so
+CHUNK=$(yes '\x1E\xFF\x2F\xE1\x1C\xB0\x8D\xE2' | head -n 100 | tr -d '\n'); NUMGEN=$(seq 4000 | tr '\r\n' ' '); printf $CHUNK%.0s $NUMGEN &> libtersafe.so
 sleep 5
 echo " "
 echo "Auto Play Game"
@@ -94,20 +97,24 @@ chmod -R 777 /data/data/com.tencent.ig/lib/mod2/libtersafe.so
 echo "$(tr -cd 'E7E9EAECEDE2E3FAFBFCFDFEE7FAE9FBEAFCECFDSTUVWXYZabcdefghijklmnopqrstuvwxyzBCDEFGHIJKLMNOPQRSTUVWXYZ0123456789()+*,.-/=@!$_?&���/=/-��:;#�%<>|�\�~�.^�' < /dev/urandom | head -c$(shuf -i 400000-1000000 -n 1))" >> /data/data/com.tencent.ig/lib/mod2/libtersafe.so
 echo "-----------------------------------------------"
 echo -e "[IGNORE NOT FOUND!!!]"
-echo -e "[IGNORE broken pipe!!!]"
 echo " "
 echo -e "[IGNORE NOT FOUND!!!]"
-echo -e "[IGNORE broken pipe!!!]"
 echo " "
 echo -e "[IGNORE NOT FOUND!!!]"
-echo -e "[IGNORE broken pipe!!!]"
 echo " "
-echo -e "Memory information:"
+echo -e "\e[33mMemory information:"
 cat /proc/meminfo
 echo -e "Please Wait..."
 echo "-----------------------------------------------"
 echo "pensiunanhacker TM"
-sleep 1
+chown 1000:1000 /data/data/com.tencent.ig/lib/libtprt.so
+chown 1000:1000 /data/data/com.tencent.ig/lib/libUE4.so
+chown 1000:1000 /data/data/com.tencent.ig/lib/libgcloud.so
+chown 1000:1000 /data/data/com.tencent.ig/lib/libtersafe.so
+echo "setting ip server..."
+iptables -I INPUT -s report.syzs.qq.com -j DROP &>/dev/null
+iptables -I INPUT -s sy.guanjia.qq.com -j DROP &>/dev/null
+sleep 3
 #664START
 #1
 chmod -R 664 /data/data/com.tencent.ig/lib/libabase.so #1
@@ -198,6 +205,6 @@ echo "-----------------------------------------------"
 echo "please wait... "
 sleep 7
 echo "-----------------------------------------------"
-echo " yt:pensiunanhacker [TeaM]"
-echo " Press [(Im) button] then [ENTER] to EXIT"
+echo " \e[32myt:pensiunanhacker [TeaM]"
+echo " \e[32mPress [(Im) button] then [ENTER] to EXIT"
 echo "-----------------------------------------------"
