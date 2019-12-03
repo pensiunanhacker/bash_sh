@@ -1,5 +1,7 @@
 echo "--yt:pensiunanhacker--"
-echo "-----------------------------------------------"
+sleep 3
+echo " "
+echo " "
 rm -rf bash_sh
 rm /data/dalvik-cache
 sleep 3
@@ -11,10 +13,11 @@ echo "trying stop game again..."
 am stopservice -S com.tencent.ig
 echo "clearing cache..."
 adb shell su -c "rm -rf /data/data/com.tencent.ig/cache/*"
-
+#fix close
+am force-stop com.tencent.ig
 #fix file oobbmod (rename default again)
 #sooooooon
-echo "CLEANING LIB MOD..."
+echo "\e[33mCLEANING LIB MOD..."
 echo "-----------------------------------------------"
 #remove mod2 folder libmod
 rm -rf /data/data/com.tencent.ig/lib/mod2
@@ -75,16 +78,108 @@ chmod -R 755 /data/data/com.tencent.ig/lib/libzip.so #17
 #18
 chmod -R 755 /data/data/com.tencent.ig/lib/libzlib.so #18
 #755END
+#
+#cleanlog_start
+pHcleanlog()
+{
+echo "plz wait cleaning log..."
+echo ""
+rm -rf /sdcard/Android/data/com.tencent.ig/cache &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/tbslog &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/Season &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/RoleInfo &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/PersonSpace &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/Match &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/LobbyBubble &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/GEM &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/Loading &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/Character &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/SaveGames/Activity &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/RoleInfo/RoleInfo.json &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/tdm.db &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/beacon_db &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/bugly_db_ &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/config.db &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/iMSDK.db &> /dev/null
+rm -rf /sdcard/.backups/com.tencent.ig/helpshift/databases/__hs__backup_dao_storage &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_bugly &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_databases &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_geolocation &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_lib &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_tbs &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_textures &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_webview &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_webview_imsdk_inner_webview &> /dev/null
+rm -rf /data/data/com.tencent.ig/cache &> /dev/null
+rm -rf /data/data/com.tencent.ig/no_backup &> /dev/null
+rm -rf /sdcard/Tencent/beacon/meta.dat &> /dev/null
+rm -rf /sdcard/MidasOversea/GUID &> /dev/null
+rm -rf /sdcard/Tencent/Midas/Log/com.tencent.ig &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/ca-bundle.pem &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/cacheFile.txt &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/login-identifier.txt &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/cache &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/tbslog &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Logs &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flist &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_temp &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/RoleInfo/RoleInfo.json &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/PufferFileList.json &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/StatEventReportedFlag &> /dev/null
+rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/PufferTmpDir &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_bugly &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/google_app_measurement_local.db-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/pri_tencent_analysis.db-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/tencent_analysis.db-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/xg_message.db-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/google_app_measurement_local.db &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/pri_tencent_analysis.db &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_issues-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_key_values-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_sessions-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/__hs__db_support_key_values-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/bugly_db_-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/databases/__hs_log_store-journal &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/tss_tmp &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/ss_tmp &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/AppEventsLogger.persistedevents &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/tss_cs_stat2.dat &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/tss_app_915c.dat &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/tss.i.m.dat &> /dev/null
+rm -rf /data/data/com.tencent.ig/files/tpnlcache.data &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_bugly &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_appcache &> /dev/null
+rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
+sleep 5
+}
+#cleanlog_end
+#
+#cleanlog func
+PACKAGE='com.tencent.ig'
+while [ $(pidof $PACKAGE) ]
+do
+pHcleanlog
+if [ ! $(pidof $PACKAGE) ]; then
+break
+fi
+done
+#
+su -c iptables --flush
 echo "DONE ROMOVED FOLDER MOD2"
 echo " "
 echo " "
 echo "-----------------------------------------------"
-echo "yt:pensiunanhacker [TeaM]"
+echo "\e[32myt:pensiunanhacker [TeaM]"
 echo " "
 echo " "
-echo "DONE ALL OFF COMPLETED!!!"
+echo "\e[32mDONE ALL OFF COMPLETED!!!"
 echo "-----------------------------------------------"
-echo "Press [(Im) button] then [ENTER] to EXIT"
+echo "\e[32mPress [(Im) button] then [ENTER] to EXIT"
 echo "-----------------------------------------------"
 
 
