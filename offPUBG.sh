@@ -1,6 +1,7 @@
 echo "--yt:pensiunanhacker--"
 echo "-----------------------------------------------"
 rm -rf bash_sh
+rm /data/dalvik-cache
 sleep 3
 echo " "
 echo " "
@@ -9,7 +10,7 @@ pkill com.tencent.ig/com.epicgames.ue4
 echo "trying stop game again..."
 am stopservice -S com.tencent.ig
 echo "clearing cache..."
-adb shell su -c "rm -rf /data/data/<app's package>/cache/*"
+adb shell su -c "rm -rf /data/data/com.tencent.ig/cache/*"
 
 #fix file oobbmod (rename default again)
 #sooooooon
