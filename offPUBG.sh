@@ -1,10 +1,21 @@
 echo "--yt:pensiunanhacker--"
+echo "-----------------------------------------------"
+echo "looking root access"
+tsu
+cd
+ls
+cd bash_sh
+rm -rf bash_sh
 sleep 3
 echo " "
 echo " "
-am stop -n com.tencent.ig/com.epicgames.ue4.SplashActivity
-echo "again stop "
-adb shell am broadcast -a com.epicgames.ue4.SplashActivity.STOP
+echo "trying stop game..."
+pkill com.tencent.ig/com.epicgames.ue4
+echo "trying stop game again..."
+am stopservice -S com.tencent.ig
+echo "clearing cache..."
+adb shell su -c "rm -rf /data/data/<app's package>/cache/*"
+
 #fix file oobbmod (rename default again)
 #sooooooon
 echo "CLEANING LIB MOD..."
