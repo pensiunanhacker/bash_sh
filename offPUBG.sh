@@ -1,10 +1,5 @@
 echo "--yt:pensiunanhacker--"
 echo "-----------------------------------------------"
-echo "looking root access"
-tsu
-cd
-ls
-cd bash_sh
 rm -rf bash_sh
 sleep 3
 echo " "
