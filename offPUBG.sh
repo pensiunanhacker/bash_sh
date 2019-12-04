@@ -2,19 +2,19 @@ echo "--yt:pensiunanhacker--"
 sleep 3
 echo " "
 echo " "
-rm -rf bash_sh
 rm /data/dalvik-cache
+echo "clearing cache..."
+rm -rf /data/data/com.tencent.ig/cache/*
+echo "clearing cache..."
+adb shell su -c "rm -rf /data/data/com.tencent.ig/cache/*"
 sleep 3
 echo " "
 echo " "
+#fix close
+am force-stop com.tencent.ig
 echo "trying stop game..."
 pkill com.tencent.ig/com.epicgames.ue4
 echo "trying stop game again..."
-am stopservice -S com.tencent.ig
-echo "clearing cache..."
-adb shell su -c "rm -rf /data/data/com.tencent.ig/cache/*"
-#fix close
-am force-stop com.tencent.ig
 #fix file oobbmod (rename default again)
 #sooooooon
 echo "\e[33mCLEANING LIB MOD..."
@@ -78,9 +78,12 @@ chmod -R 755 /data/data/com.tencent.ig/lib/libzip.so #17
 #18
 chmod -R 755 /data/data/com.tencent.ig/lib/libzlib.so #18
 #755END
+#ip flush cleaning
+su -c iptables --flush
+echo "plz wait cleaning network tracker..."
 #
 #cleanlog_start
-pHcleanlog()
+cleanlog()
 {
 echo "plz wait cleaning log..."
 echo ""
@@ -155,21 +158,11 @@ rm -rf /data/data/com.tencent.ig/files/tpnlcache.data &> /dev/null
 rm -rf /data/data/com.tencent.ig/app_bugly &> /dev/null
 rm -rf /data/data/com.tencent.ig/app_appcache &> /dev/null
 rm -rf /data/data/com.tencent.ig/app_crashrecord &> /dev/null
-sleep 5
+sleep 1
 }
 #cleanlog_end
 #
-#cleanlog func
-PACKAGE='com.tencent.ig'
-while [ $(pidof $PACKAGE) ]
-do
-pHcleanlog
-if [ ! $(pidof $PACKAGE) ]; then
-break
-fi
-done
-#
-su -c iptables --flush
+rm -rf /bash_sh
 echo "DONE ROMOVED FOLDER MOD2"
 echo " "
 echo " "
